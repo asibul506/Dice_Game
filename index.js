@@ -2,47 +2,26 @@
 var dice1 = Math.floor(Math.random() * 6) + 1; // 1-6
 var dice2 = Math.floor(Math.random() * 6) + 1; // 1-6
 
-if(dice1==1){
-    document.querySelector(".img1").setAttribute("src", "images/dice1.png");
-}else if(dice1==2){
-    document.querySelector(".img1").setAttribute("src", "images/dice2.png");
-}
-else if(dice1==3){
-    document.querySelector(".img1").setAttribute("src", "images/dice3.png");
-}
-else if(dice1==4){
-    document.querySelector(".img1").setAttribute("src", "images/dice4.png");
-}
-else if(dice1==5){
-    document.querySelector(".img1").setAttribute("src", "images/dice5.png");
-}else{
-    document.querySelector(".img1").setAttribute("src", "images/dice6.png");
-}
+image1Srouce = "images/dice" + dice1 + ".png"; // image1Srouce = "images/dice1.png"
+image2Srouce = "images/dice" + dice2 + ".png"; // image2Srouce = "images/dice1.png"
+
+document.querySelector(".img1").setAttribute("src", image1Srouce);
+document.querySelector(".img2").setAttribute("src", image2Srouce);
+
+// document.querySelector("h1").innerHTML = "Player 1 Wins! 🚩";   
+// document.querySelector("h1").innerHTML = "Player 2 Wins! 🚩";
+// document.querySelector("h1").innerHTML = "Draw!";
+// document.querySelector("h1").innerHTML = "Refresh Me!";
+// document.querySelector("h1").innerHTML = "Refresh Me!";
 
 
-if(dice2==1){
-document.querySelector(".img2").setAttribute("src", "images/dice1.png");
-}else if(dice2==2){
-    document.querySelector(".img2").setAttribute("src", "images/dice2.png");
-}
-else if(dice2==3){
-    document.querySelector(".img2").setAttribute("src", "images/dice3.png");
-}
-else if(dice2==4){
-    document.querySelector(".img2").setAttribute("src", "images/dice4.png");
-}
-else if(dice2==5){
-    document.querySelector(".img2").setAttribute("src", "images/dice5.png");
-}else{
-    document.querySelector(".img2").setAttribute("src", "images/dice6.png");
-}
 
 if(dice1>dice2){
-    document.querySelector("h1").innerHTML = "Player 1 Wins! 🚩";
+    document.querySelector("h2").innerHTML = "Player 1 Wins! 🚩";
 }
 else if(dice1<dice2){
-    document.querySelector("h1").innerHTML = "Player 2 Wins! 🚩";
+    document.querySelector("h2").innerHTML = "Player 2 Wins! 🚩";
 }
 else{
-    document.querySelector("h1").innerHTML = "Draw!";
+    document.querySelector("h2").innerHTML = "Draw!";
 }
